@@ -15,6 +15,13 @@ dbConnect();
 
 app.use("/api/v1",router)
 
+app.get("/",(req,res)=> {
+  res.send("Practical Management system");
+}
+);
+
+
+
 app.listen(PORT,()=>{
     console.log(`server is runing on ${PORT}`);
 })

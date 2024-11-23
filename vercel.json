@@ -1,1 +1,13 @@
-{ "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "/api" }] }
+{ "version": 2,
+  "functions":{
+    "api/index.js":{
+      "memory":1024,
+      "maxDuration":60
+    }
+    
+  },
+  "route": [
+    {
+      "handle":"filesystem"
+    },
+    { "source": "/(.*)", "destination": "api/index.js" }] }
